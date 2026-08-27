@@ -1,0 +1,29 @@
+== 1. Lattice-sum constants ==
+  zeta(5)-1 = 0.036928   Q6 = 0.147385 (bound 0.180618)   P6 = 0.019585   U6 = 0.279644
+  (45) budget 225*(0.037+2*0.181+0.020+0.001) = 94.500 < 95
+  U-turn budget 225*(0.037+0.281+0.001) = 71.775 < 72
+
+== 2. Elementary certification arithmetic ==
+  v2 (k<=5, int from 5): 0.037062  -> certifies 0.037? False
+  v3 (k<=6, int from 6): 0.036983  -> certifies 0.037? True
+  U6 partial (k<=5) = 0.279359 < 0.2794; tail bound = 0.000369 < 0.0004
+
+== 3. Objective coefficient lambda (Lemma 8.1, Appendix A) ==
+  D=    2: lambda/b^4 = 29.270493   |halo|/b^4 = 1.4738
+  D=   10: lambda/b^4 = 29.185316   |halo|/b^4 = 1.5590
+  D=  100: lambda/b^4 = 29.184324   |halo|/b^4 = 1.5600
+  D= 1000: lambda/b^4 = 29.184324   |halo|/b^4 = 1.5600
+  exact lambda/b^4 at D=2, b=1/500: 29.270918  (Appendix A: 29.270918)
+
+== 4. Component-flip cross-cut loads (units of b^4) ==
+  unit step  (q_D | step)    same-tree  58.29 (crude  62.92)  cross-tree  29.56 (crude  32.70)  favorable 160.0
+  q_{D-1} | q_D              same-tree  32.33 (crude  36.61)  cross-tree  29.56 (crude  32.70)  favorable 160.0
+  q_{D-2} | q_{D-1}          same-tree   6.38 (crude  10.29)  cross-tree  29.56 (crude  32.70)  favorable 160.0
+  q_0 | q_1                  same-tree   2.77 (crude   3.90)  cross-tree  28.73 (crude  30.22)  favorable 160.0
+  step | ray_1               same-tree  32.33 (crude  36.61)  cross-tree  29.56 (crude  32.70)  favorable 160.0
+  ray_1 | ray_2              same-tree   6.38 (crude  10.29)  cross-tree  29.56 (crude  32.70)  favorable 160.0
+  root: right/up/left        same-tree  36.09 (crude  41.47)
+  root: right/up/down        same-tree  63.14 (crude  70.23)
+  worst total crude adverse load 107.23 b^4 < 132.75 b^4 budget; favorable edge > 158.6 b^4
+
+ALL CHECKS PASSED
